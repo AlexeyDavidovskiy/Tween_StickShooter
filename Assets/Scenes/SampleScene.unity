@@ -7471,8 +7471,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RangeAttack
   firePoint: {fileID: 86175076}
   shotFlash: {fileID: 86175074}
-  fireRate: 1
-  range: 10
+  fireRate: 0.5
+  range: 15
 --- !u!114 &1620767995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7486,7 +7486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySensor
   player: {fileID: 1831762218}
-  viewDistance: 10
+  viewDistance: 20
 --- !u!114 &1620767996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7499,7 +7499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb96fa9fbdf3744fb8e966b99dfe017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovementRandomPatrol
-  patrolRadius: 10
+  patrolRadius: 120
   stoppingDistance: 0.5
   agent: {fileID: 1620768004}
 --- !u!114 &1620767997
@@ -7521,26 +7521,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.33333334
-      outSlope: 0.33333334
+      inSlope: 0.02
+      outSlope: 0.02
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 3
+      time: 50
       value: 1
-      inSlope: 0.13725491
-      outSlope: 0.13725491
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 20
-      value: 0
-      inSlope: -0.05882353
-      outSlope: -0.05882353
+      inSlope: 0.02
+      outSlope: 0.02
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -7552,32 +7543,41 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 2
+      time: 0
       value: 0
-      inSlope: 0.5
-      outSlope: 0.5
+      inSlope: 0
+      outSlope: 0
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 4
+      time: 25
+      value: 0
+      inSlope: 0.034476146
+      outSlope: 0.034476146
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 35
       value: 1
-      inSlope: 0.08333333
-      outSlope: 0.08333333
-      tangentMode: 34
+      inSlope: -0.057715002
+      outSlope: -0.057715002
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 7
+      time: 45
       value: 0
-      inSlope: -0.33333334
-      outSlope: -0.33333334
+      inSlope: -0.1
+      outSlope: -0.1
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -7587,26 +7587,35 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 1
-      outSlope: 1
+      inSlope: 0.035714287
+      outSlope: 0.035714287
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 2
-      value: 1
-      inSlope: 0.25
-      outSlope: 0.25
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 3
+      time: 15
       value: 0.5
-      inSlope: -0.5
-      outSlope: -0.5
+      inSlope: 0.067857146
+      outSlope: 0.067857146
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 20
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 25
+      value: 0.5
+      inSlope: -0.1
+      outSlope: -0.1
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -7620,26 +7629,26 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: -0.5
-      outSlope: -0.5
+      inSlope: -0.04761905
+      outSlope: -0.04761905
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
+      time: 10.5
       value: 0.5
-      inSlope: -0.5
-      outSlope: -0.5
+      inSlope: -0.04761905
+      outSlope: -0.04761905
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 2
+      time: 21
       value: 0
-      inSlope: -0.5
-      outSlope: -0.5
+      inSlope: -0.04761905
+      outSlope: -0.04761905
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -7794,7 +7803,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
