@@ -57,6 +57,7 @@ public class EnemyUtilityAI : MonoBehaviour
                 movement.Chase(player);
                 break;
             case EnemyAction.Attack:
+                movement.StopMovement();
                 attack.TryAttack(player);
                 break;
             case EnemyAction.Retreat:

@@ -6,4 +6,5 @@ public interface IEnemyMovement
     public void Patrol();
     public void Chase(Transform _target);
     public void RetreatFrom(Transform _target);
+    public void StopMovement();
 }
