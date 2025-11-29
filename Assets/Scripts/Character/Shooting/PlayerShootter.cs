@@ -9,8 +9,12 @@ public class PlayerShootter : MonoBehaviour
     [SerializeField] private Transform[] firePoints;
     [SerializeField] private ParticleSystem[] shotFlashes;
     [SerializeField] private ParticleSystem hitFlashesPrefab;
+
+    [Header("Shootting Settings")]
     [SerializeField] private float fireRate;
     [SerializeField] private float range;
+    [SerializeField] private int damage;
+    [SerializeField] private LayerMask enemyLayerMask;
 
     private int currentGunIndex;
     private float nextFireTime;
@@ -61,8 +65,13 @@ public class PlayerShootter : MonoBehaviour
 
         Vector3 shootDirection = (targetPoint - firePoint.position).normalized;
 
-        if (Physics.Raycast(firePoint.position, shootDirection, out RaycastHit hit, range))
+        if (Physics.Raycast(firePoint.position, shootDirection, out RaycastHit hit, range, enemyLayerMask))
         {
+            if(hit.collider.TryGetComponent(out IDamageable damageable)) 
+            {
+                damageable.TakeDamage(damage);
+            }
+
             ParticleSystem hitFX = Instantiate(hitFlashesPrefab, hit.point, Quaternion.LookRotation(hit.normal));
             hitFX.Play();
             Destroy(hitFX.gameObject, 0.4f);

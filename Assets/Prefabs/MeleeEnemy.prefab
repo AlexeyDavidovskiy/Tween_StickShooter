@@ -21,7 +21,10 @@ GameObject:
   - component: {fileID: 2440052712286849743}
   - component: {fileID: 5157546949150395259}
   - component: {fileID: 2261127793882170094}
-  m_Layer: 0
+  - component: {fileID: 6598223775821679107}
+  - component: {fileID: 750425005295024008}
+  - component: {fileID: 7833749670797323113}
+  m_Layer: 7
   m_Name: MeleeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,6 +414,62 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6598223775821679107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8472316380169287922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e65e64107b7e0458fe5d2131e79106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
+  maxHealth: 50
+  healthIsChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &750425005295024008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8472316380169287922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cdb21cf6260ba044bb57f0483c57a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathController
+  healthSystem: {fileID: 0}
+--- !u!54 &7833749670797323113
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8472316380169287922}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &9195919994071625112
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +482,7 @@ GameObject:
   - component: {fileID: 7888274081416861345}
   - component: {fileID: 3341425941676691023}
   - component: {fileID: 1405762132132100409}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,13 +653,97 @@ PrefabInstance:
       propertyPath: m_Name
       value: Reaper
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62e56671877cb9a41aa09341a03d2be2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 62e56671877cb9a41aa09341a03d2be2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7005063182559857649}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 62e56671877cb9a41aa09341a03d2be2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4226890688141322785}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 62e56671877cb9a41aa09341a03d2be2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7567968529888051557}
   m_SourcePrefab: {fileID: 100100000, guid: 62e56671877cb9a41aa09341a03d2be2, type: 3}
 --- !u!4 &8090912192770051889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 62e56671877cb9a41aa09341a03d2be2, type: 3}
   m_PrefabInstance: {fileID: 8629469426260043994}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8864035595402335627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 62e56671877cb9a41aa09341a03d2be2, type: 3}
+  m_PrefabInstance: {fileID: 8629469426260043994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &7005063182559857649
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864035595402335627}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.015
+  m_Height: 0.08
+  m_Direction: 0
+  m_Center: {x: 0.010454957, y: 0, z: 0.046}
+--- !u!114 &4226890688141322785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864035595402335627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58629f64bceeba649a1457e6fb257c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeDamageDealer
+  damage: 20
+  playerLayerMAsk:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!54 &7567968529888051557
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864035595402335627}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
